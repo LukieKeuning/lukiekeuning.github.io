@@ -1,0 +1,206 @@
+{
+  "profile": {
+    "personal": {
+      "name": "Lukie Keuning",
+      "initials": "LK",
+      "title": "Student Bouwkunde",
+      "location": "Den Haag, Zuid-Holland, Nederland",
+      "introduction": "Student Bouwkunde aan De Haagse Hogeschool, gevestigd in Den Haag.",
+      "availability": ""
+    },
+    "about": {
+      "biography": "Ik omschrijf mezelf als creatief, communicatief en een teamspeler.",
+      "motivation": "Mijn belangstelling gaat uit naar renovatie- en transformatieprojecten, uitbouwen en optoppingen."
+    },
+    "education": [
+      {
+        "id": "hhs",
+        "institution": "De Haagse Hogeschool",
+        "degree": "Bouwkunde",
+        "start": "2024-09",
+        "expectedEnd": "2028-07",
+        "ongoing": true,
+        "description": "",
+        "specializations": [],
+        "end": ""
+      },
+      {
+        "id": "dalton",
+        "institution": "Dalton Den Haag",
+        "degree": "Havo · Natuur & Techniek",
+        "start": "2019",
+        "end": "2024",
+        "expectedEnd": "",
+        "ongoing": false,
+        "description": "",
+        "specializations": []
+      }
+    ],
+    "experience": [
+      {
+        "id": "vinsa",
+        "company": "Vinsa vastgoed",
+        "role": "Medewerker",
+        "type": "Stage",
+        "start": "2026-08",
+        "end": null,
+        "location": "Huizen, Noord-Holland",
+        "workMode": "",
+        "description": "",
+        "skills": [],
+        "propertyRelated": true
+      },
+      {
+        "id": "avonturia-current",
+        "company": "Avonturia De Vogelkelder B.V.",
+        "role": "Horecamedewerker",
+        "type": "Parttime",
+        "start": "2024-08",
+        "end": "2026-08",
+        "location": "Den Haag",
+        "workMode": "Op locatie",
+        "description": "Werkzaam geweest bij De Kitchen.",
+        "skills": ["Sociaal", "Serveren"],
+        "propertyRelated": false
+      },
+      {
+        "id": "cardia",
+        "company": "Cardia",
+        "role": "Cateringmedewerker",
+        "type": "Parttime",
+        "start": "2024-06",
+        "end": "2024-08",
+        "location": "Den Haag",
+        "workMode": "Op locatie",
+        "description": "Catering bij Tabitha van Cardia.",
+        "skills": ["Werken met ouderen"],
+        "propertyRelated": false
+      },
+      {
+        "id": "avonturia-first",
+        "company": "Avonturia De Vogelkelder B.V.",
+        "role": "Horecamedewerker",
+        "type": "Parttime",
+        "start": "2022-05",
+        "end": "2024-06",
+        "location": "Den Haag",
+        "workMode": "Op locatie",
+        "description": "Werkzaam bij Oehoe/Kitchen.",
+        "skills": ["Sociaal", "Serveren"],
+        "propertyRelated": false
+      }
+    ],
+    "skills": [
+      {
+        "id": "architecture",
+        "name": "Bouwkundige vaardigheden",
+        "items": []
+      },
+      {
+        "id": "software",
+        "name": "Software",
+        "items": []
+      },
+      {
+        "id": "professional",
+        "name": "Professionele vaardigheden",
+        "items": ["Sociaal", "Serveren", "Werken met ouderen"]
+      },
+      {
+        "id": "other",
+        "name": "Overige vaardigheden",
+        "items": []
+      }
+    ],
+    "projects": [],
+    "interests": [],
+    "contact": {
+      "email": "lukiekeuning@gmail.com",
+      "phone": "06-25403062",
+      "linkedin": ""
+    },
+    "assets": {
+      "profileImage": "images/profile/lukie-keuning.webp",
+      "profileImageAlt": "Portret van Lukie Keuning",
+      "cvFile": "cv/lukie-keuning.pdf"
+    },
+    "qualifications": [
+      {
+        "id": "propaedeutic",
+        "name": "Propedeuse Bouwkunde",
+        "date": "2025"
+      },
+      {
+        "id": "dutch-4f",
+        "name": "Certificaat Nederlands 4F",
+        "date": "2026"
+      },
+      {
+        "id": "vol-vca",
+        "name": "Certificaat VOL-VCA",
+        "date": "2026-03-23"
+      }
+    ]
+  },
+  "ui": {
+    "home": "Home",
+    "about": "Over mij",
+    "education": "Opleiding",
+    "experience": "Ervaring",
+    "skills": "Vaardigheden",
+    "projects": "Projecten",
+    "contact": "Contact",
+    "interests": "Interesses",
+    "portfolio": "Persoonlijk portfolio",
+    "discipline": "Bouwkunde & architectuur",
+    "more": "Meer over mij",
+    "cv": "Download CV",
+    "noCv": "CV binnenkort beschikbaar",
+    "skip": "Direct naar inhoud",
+    "menu": "Menu openen of sluiten",
+    "theme": "Wissel kleurthema",
+    "language": "Kies taal",
+    "top": "Terug naar boven",
+    "blueprint": "Bouwtekening",
+    "finished": "Gebouw",
+    "drawing": "Interactieve architectuurstudie",
+    "concept": "Conceptuele illustratie · geen eigen project",
+    "drawingNumber": "FIG. 01 / RUIMTELIJKE STUDIE",
+    "scale": "SCHEMATISCH / NIET OP SCHAAL",
+    "explore": "Ontdek de constructie",
+    "structure": "Draagconstructie",
+    "facade": "Gevel & glas",
+    "roof": "Dakvlak",
+    "reset": "Tekening opnieuw opbouwen",
+    "aboutHeading": "Even voorstellen.",
+    "educationHeading": "De basis voor later.",
+    "experienceHeading": "Ervaring in de praktijk.",
+    "skillsHeading": "Wat ik meebreng.",
+    "projectsHeading": "Werk in beeld.",
+    "contactHeading": "Neem contact op.",
+    "interestsHeading": "Buiten de studie.",
+    "location": "Locatie",
+    "study": "Studie",
+    "institution": "Hogeschool",
+    "ongoing": "Lopend",
+    "expected": "Verwachte afronding",
+    "present": "heden",
+    "property": "Vastgoed",
+    "details": "Bekijk details",
+    "close": "Sluiten",
+    "external": "Open project",
+    "email": "E-mail",
+    "phone": "Telefoon",
+    "linkedin": "LinkedIn",
+    "portrait": "Architecturale profielillustratie",
+    "notFound": "Deze pagina bestaat niet.",
+    "back": "Naar de homepage",
+    "training": "Opleiding",
+    "employment": "Werkervaring",
+    "year": "Jaar",
+    "tools": "Technieken & software",
+    "next": "Volgende sectie",
+    "qualifications": "Diploma’s en certificaten",
+    "earned": "Behaald"
+  }
+}

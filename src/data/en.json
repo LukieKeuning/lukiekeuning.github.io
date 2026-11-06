@@ -1,0 +1,206 @@
+{
+  "profile": {
+    "personal": {
+      "name": "Lukie Keuning",
+      "initials": "LK",
+      "title": "Built Environment Student",
+      "location": "The Hague, South Holland, Netherlands",
+      "introduction": "Built Environment student at The Hague University of Applied Sciences, based in The Hague.",
+      "availability": ""
+    },
+    "about": {
+      "biography": "I describe myself as creative, communicative and a team player.",
+      "motivation": "I am interested in renovation and conversion projects, extensions and adding storeys to existing buildings."
+    },
+    "education": [
+      {
+        "id": "hhs",
+        "institution": "The Hague University of Applied Sciences",
+        "degree": "Built Environment",
+        "start": "2024-09",
+        "expectedEnd": "2028-07",
+        "ongoing": true,
+        "description": "",
+        "specializations": [],
+        "end": ""
+      },
+      {
+        "id": "dalton",
+        "institution": "Dalton Den Haag",
+        "degree": "HAVO · Science & Technology",
+        "start": "2019",
+        "end": "2024",
+        "expectedEnd": "",
+        "ongoing": false,
+        "description": "",
+        "specializations": []
+      }
+    ],
+    "experience": [
+      {
+        "id": "vinsa",
+        "company": "Vinsa vastgoed",
+        "role": "Employee",
+        "type": "Internship",
+        "start": "2026-08",
+        "end": null,
+        "location": "Huizen, North Holland",
+        "workMode": "",
+        "description": "",
+        "skills": [],
+        "propertyRelated": true
+      },
+      {
+        "id": "avonturia-current",
+        "company": "Avonturia De Vogelkelder B.V.",
+        "role": "Hospitality employee",
+        "type": "Part-time",
+        "start": "2024-08",
+        "end": "2026-08",
+        "location": "The Hague",
+        "workMode": "On-site",
+        "description": "Worked at De Kitchen.",
+        "skills": ["Social skills", "Table service"],
+        "propertyRelated": false
+      },
+      {
+        "id": "cardia",
+        "company": "Cardia",
+        "role": "Catering employee",
+        "type": "Part-time",
+        "start": "2024-06",
+        "end": "2024-08",
+        "location": "The Hague",
+        "workMode": "On-site",
+        "description": "Catering at Cardia’s Tabitha location.",
+        "skills": ["Working with older adults"],
+        "propertyRelated": false
+      },
+      {
+        "id": "avonturia-first",
+        "company": "Avonturia De Vogelkelder B.V.",
+        "role": "Hospitality employee",
+        "type": "Part-time",
+        "start": "2022-05",
+        "end": "2024-06",
+        "location": "The Hague",
+        "workMode": "On-site",
+        "description": "Worked at Oehoe/Kitchen.",
+        "skills": ["Social skills", "Table service"],
+        "propertyRelated": false
+      }
+    ],
+    "skills": [
+      {
+        "id": "architecture",
+        "name": "Architectural skills",
+        "items": []
+      },
+      {
+        "id": "software",
+        "name": "Software",
+        "items": []
+      },
+      {
+        "id": "professional",
+        "name": "Professional skills",
+        "items": ["Social skills", "Table service", "Working with older adults"]
+      },
+      {
+        "id": "other",
+        "name": "Other skills",
+        "items": []
+      }
+    ],
+    "projects": [],
+    "interests": [],
+    "contact": {
+      "email": "lukiekeuning@gmail.com",
+      "phone": "06-25403062",
+      "linkedin": ""
+    },
+    "assets": {
+      "profileImage": "images/profile/lukie-keuning.webp",
+      "profileImageAlt": "Portrait of Lukie Keuning",
+      "cvFile": "cv/lukie-keuning.pdf"
+    },
+    "qualifications": [
+      {
+        "id": "propaedeutic",
+        "name": "Built Environment propaedeutic diploma",
+        "date": "2025"
+      },
+      {
+        "id": "dutch-4f",
+        "name": "Dutch 4F certificate",
+        "date": "2026"
+      },
+      {
+        "id": "vol-vca",
+        "name": "VOL-VCA certificate",
+        "date": "2026-03-23"
+      }
+    ]
+  },
+  "ui": {
+    "home": "Home",
+    "about": "About",
+    "education": "Education",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "interests": "Interests",
+    "portfolio": "Personal portfolio",
+    "discipline": "Built environment & architecture",
+    "more": "More about me",
+    "cv": "Download CV",
+    "noCv": "CV available soon",
+    "skip": "Skip to content",
+    "menu": "Toggle navigation",
+    "theme": "Switch color theme",
+    "language": "Choose language",
+    "top": "Back to top",
+    "blueprint": "Blueprint",
+    "finished": "Building",
+    "drawing": "Interactive architectural study",
+    "concept": "Concept illustration · not a personal project",
+    "drawingNumber": "FIG. 01 / SPATIAL STUDY",
+    "scale": "SCHEMATIC / NOT TO SCALE",
+    "explore": "Explore the structure",
+    "structure": "Load-bearing structure",
+    "facade": "Facade & glazing",
+    "roof": "Roof plane",
+    "reset": "Rebuild drawing",
+    "aboutHeading": "An introduction.",
+    "educationHeading": "Foundations for the future.",
+    "experienceHeading": "Experience in practice.",
+    "skillsHeading": "What I bring.",
+    "projectsHeading": "Work in focus.",
+    "contactHeading": "Get in touch.",
+    "interestsHeading": "Beyond the classroom.",
+    "location": "Location",
+    "study": "Degree",
+    "institution": "University",
+    "ongoing": "In progress",
+    "expected": "Expected completion",
+    "present": "present",
+    "property": "Real estate",
+    "details": "View details",
+    "close": "Close",
+    "external": "Open project",
+    "email": "Email",
+    "phone": "Phone",
+    "linkedin": "LinkedIn",
+    "portrait": "Architectural profile illustration",
+    "notFound": "This page does not exist.",
+    "back": "Back to homepage",
+    "training": "Education",
+    "employment": "Work experience",
+    "year": "Year",
+    "tools": "Techniques & software",
+    "next": "Next section",
+    "qualifications": "Diplomas and certificates",
+    "earned": "Awarded"
+  }
+}

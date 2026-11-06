@@ -1,0 +1,39 @@
+{
+  "name": "lukie-keuning-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "22.23.2"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "preview": "node scripts/preview.mjs",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "node --experimental-strip-types --test tests/unit/*.test.ts",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "next": "16.x",
+    "react": "19.x",
+    "react-dom": "19.x",
+    "lucide-react": "^0.577.0",
+    "geist": "1.x"
+  },
+  "devDependencies": {
+    "typescript": "6.x",
+    "@types/node": "22.x",
+    "@types/react": "19.x",
+    "@types/react-dom": "19.x",
+    "tailwindcss": "4.x",
+    "@tailwindcss/postcss": "4.x",
+    "eslint": "9.x",
+    "eslint-config-next": "16.x",
+    "prettier": "3.x",
+    "@playwright/test": "1.x"
+  }
+}
