@@ -1,6 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import type { Profile } from "../../src/types/profile";
 
 test("CV facts, portrait, contact links and original download work in both languages", async ({
   page,
@@ -203,23 +204,49 @@ test("responsive navigation and no horizontal overflow", async ({
 test("skills building selects layers without hiding skills", async ({
   page,
 }, testInfo) => {
+  const layers: Record<string, string> = {
+    professional: "foundation",
+    architecture: "structure",
+    software: "workshop",
+    other: "finish",
+  };
+  async function configuredGroups(language: "nl" | "en") {
+    const { profile } = JSON.parse(
+      await readFile(
+        new URL(`../../src/data/${language}.json`, import.meta.url),
+        "utf8",
+      ),
+    ) as { profile: Profile };
+    const order = Object.keys(layers);
+    const rank = (id: string) =>
+      order.includes(id) ? order.indexOf(id) : order.length;
+    return profile.skills
+      .filter((group) => group.items.some(Boolean))
+      .sort((a, b) => rank(a.id) - rank(b.id));
+  }
+  const groups = await configuredGroups("nl");
+  test.skip(groups.length === 0, "No skill groups configured");
+  const expectedItems = groups.flatMap((group) => group.items.filter(Boolean));
   await page.goto("./");
   const skills = page.locator("#skills");
-  await expect(skills.locator(".skills-building-card")).toHaveCount(4);
-  await expect(skills.locator(".skills-building-card li")).toHaveCount(14);
-  for (const [index, layer] of [
-    "foundation",
-    "structure",
-    "workshop",
-    "finish",
-  ].entries()) {
+  await expect(skills.locator(".skills-building-card")).toHaveCount(
+    groups.length,
+  );
+  await expect(skills.locator(".skills-building-card li")).toHaveText(
+    expectedItems,
+  );
+  for (const [index, group] of groups.entries()) {
     const button = skills.locator(".skills-building-card button").nth(index);
     await button.click();
     await expect(button).toHaveAttribute("aria-pressed", "true");
-    await expect(skills.locator(`.skills-layer.${layer}`)).toHaveClass(
-      /is-active/,
+    if (layers[group.id]) {
+      await expect(
+        skills.locator(`.skills-layer.${layers[group.id]}`),
+      ).toHaveClass(/is-active/);
+    }
+    await expect(skills.locator(".skills-building-card li")).toHaveText(
+      expectedItems,
     );
-    await expect(skills.locator(".skills-building-card li")).toHaveCount(14);
   }
   const button = skills.locator(".skills-building-card button").first();
   await button.focus();
@@ -232,8 +259,13 @@ test("skills building selects layers without hiding skills", async ({
   });
   await page.getByRole("button", { name: "Wissel kleurthema" }).click();
   await page.getByRole("button", { name: "EN", exact: true }).click();
-  await expect(skills).toContainText("Foundation");
-  await expect(skills).toContainText("Workshop");
+  const englishGroups = await configuredGroups("en");
+  await expect(skills.locator(".skills-building-card")).toHaveCount(
+    englishGroups.length,
+  );
+  await expect(skills.locator(".skills-building-card li")).toHaveText(
+    englishGroups.flatMap((group) => group.items.filter(Boolean)),
+  );
   await skills.scrollIntoViewIfNeeded();
   await skills.locator(".skills-building").screenshot({
     path: path.join(".tools", `skills-${testInfo.project.name}-dark.png`),
