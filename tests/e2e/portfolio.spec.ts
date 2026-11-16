@@ -53,6 +53,16 @@ test("CV facts, portrait, contact links and original download work in both langu
         `about-${testInfo.project.name}-${language}.png`,
       ),
     });
+    await expect(page.locator("#interests .interest-card")).toHaveCount(4);
+    await expect(
+      page.locator("#interests .interest-card").nth(2),
+    ).toContainText("Matty Jutte");
+    await page.locator("#interests").screenshot({
+      path: path.join(
+        ".tools",
+        `interests-${testInfo.project.name}-${language}.png`,
+      ),
+    });
     const downloadPromise = page.waitForEvent("download");
     await page.locator("#home .text-button").click();
     const download = await downloadPromise;
@@ -69,7 +79,7 @@ test("CV facts, portrait, contact links and original download work in both langu
 
 test("reduced motion keeps the drawing static and preferences work without storage", async ({
   page,
-}) => {
+}, testInfo) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.addInitScript(() => {
     Object.defineProperty(window, "localStorage", {
@@ -86,12 +96,21 @@ test("reduced motion keeps the drawing static and preferences work without stora
       .first()
       .evaluate((element) => getComputedStyle(element).animationName),
   ).toBe("none");
+  await page.getByRole("button", { name: "Gebouw", exact: true }).click();
+  await page.locator(".blueprint").screenshot({
+    path: path.join(".tools", `building-${testInfo.project.name}-light.png`),
+  });
   await page.getByRole("button", { name: "EN", exact: true }).click();
   await expect(page.locator(".hero-role")).toHaveText(
     "Built Environment Student",
   );
   await page.getByRole("button", { name: "Switch color theme" }).click();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+  await page.locator(".blueprint").screenshot({
+    path: path.join(".tools", `building-${testInfo.project.name}-dark.png`),
+  });
+  await page.getByRole("button", { name: "Blueprint", exact: true }).click();
+  await expect(page.locator(".blueprint")).not.toHaveClass(/is-finished/);
 });
 
 test("Dutch content and illustration remain available without JavaScript", async ({
@@ -110,7 +129,7 @@ test("Dutch content and illustration remain available without JavaScript", async
   await context.close();
 });
 
-test("Dutch homepage, empty sections, illustration and persistent preferences", async ({
+test("Dutch homepage, sample projects, illustration and persistent preferences", async ({
   page,
 }) => {
   const errors: string[] = [];
@@ -121,7 +140,7 @@ test("Dutch homepage, empty sections, illustration and persistent preferences", 
   await page.goto("./");
   await expect(page.locator("h1")).toContainText("Lukie");
   await expect(page.locator("html")).toHaveAttribute("lang", "nl");
-  await expect(page.locator("#projects")).toHaveCount(0);
+  await expect(page.locator("#projects .project-tile")).toHaveCount(3);
   await expect(page.locator("#contact")).toBeAttached();
   await expect(
     page.locator("#home").getByRole("link", { name: "Download CV" }),
@@ -193,4 +212,63 @@ test("static export contains facts and all referenced assets resolve", async ({
     .filter((value) => value.startsWith("/") && !value.startsWith("//"));
   for (const asset of new Set(assets))
     expect((await request.get(asset)).status(), asset).toBe(200);
+});
+
+test("project details are centred, responsive and keyboard accessible", async ({
+  page,
+}, testInfo) => {
+  await page.goto("./");
+  for (const language of ["nl", "en"] as const) {
+    await page
+      .getByRole("button", { name: language.toUpperCase(), exact: true })
+      .click();
+    const tile = page.locator(".project-tile").first();
+    await tile.click();
+    const modal = page.getByRole("dialog");
+    await expect(modal).toBeVisible();
+    await expect(modal.locator("h2")).toHaveText(
+      language === "nl"
+        ? "Wonen rond een binnentuin"
+        : "Living around a courtyard",
+    );
+    await expect(modal.locator("img")).toHaveCount(1);
+    await expect
+      .poll(() =>
+        modal
+          .locator("img")
+          .evaluate((image: HTMLImageElement) => image.naturalWidth),
+      )
+      .toBeGreaterThan(0);
+    const bounds = await modal.boundingBox();
+    const viewport = page.viewportSize()!;
+    expect(bounds).not.toBeNull();
+    expect(
+      Math.abs(bounds!.x + bounds!.width / 2 - viewport.width / 2),
+    ).toBeLessThan(2);
+    expect(
+      Math.abs(bounds!.y + bounds!.height / 2 - viewport.height / 2),
+    ).toBeLessThan(2);
+    expect(
+      await modal.evaluate(
+        (element) => element.scrollWidth <= element.clientWidth,
+      ),
+    ).toBe(true);
+    await page.screenshot({
+      path: path.join(
+        ".tools",
+        `project-dialog-${testInfo.project.name}-${language}.png`,
+      ),
+    });
+    await page.keyboard.press("Escape");
+    await expect(modal).toHaveCount(0);
+    await expect(tile).toBeFocused();
+    await tile.click();
+    await page
+      .getByRole("button", {
+        name: language === "nl" ? "Sluiten" : "Close",
+        exact: true,
+      })
+      .click();
+    await expect(modal).toHaveCount(0);
+  }
 });

@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState } from "react";
+import { useId, useRef, useState } from "react";
 import { RotateCcw, MoveUpRight } from "lucide-react";
 import { usePreferences } from "@/context/preferences";
 
@@ -9,6 +9,7 @@ export function Blueprint({ compact = false }: { compact?: boolean }) {
   const [revision, setRevision] = useState(0);
   const [detail, setDetail] = useState("");
   const drawing = useRef<SVGSVGElement>(null);
+  const materialId = useId();
   return (
     <div
       className={`blueprint ${finished ? "is-finished" : ""} ${compact ? "compact" : ""}`}
@@ -38,6 +39,22 @@ export function Blueprint({ compact = false }: { compact?: boolean }) {
         }}
       >
         <defs>
+          <linearGradient
+            id={`${materialId}-glass`}
+            x1="0"
+            y1="0"
+            x2="1"
+            y2="1"
+          >
+            <stop offset="0%" stopColor="var(--building-glass-light)" />
+            <stop offset="48%" stopColor="var(--building-glass-mid)" />
+            <stop offset="49%" stopColor="var(--building-glass-light)" />
+            <stop offset="100%" stopColor="var(--building-glass-dark)" />
+          </linearGradient>
+          <linearGradient id={`${materialId}-roof`} x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="var(--building-roof-light)" />
+            <stop offset="100%" stopColor="var(--building-roof-dark)" />
+          </linearGradient>
           <pattern
             id={compact ? "grid-small" : "grid-main"}
             width="32"
@@ -73,9 +90,13 @@ export function Blueprint({ compact = false }: { compact?: boolean }) {
           <path d="M45 365 400 160 660 310M110 220 590 495M175 125V425M535 160V470M350 75V500M55 400 395 200" />
         </g>
         <g className="ground">
-          <path d="m70 381 325-188 269 155-326 188Z" />
-          <path d="m92 385 303-175 245 141-303 175Z" />
+          <path className="site-plane" d="m70 381 325-188 269 155-326 188Z" />
+          <path className="site-paving" d="m92 385 303-175 245 141-303 175Z" />
         </g>
+        <path
+          className="building-shadow finished-detail"
+          d="m140 363 208 120 213-123 78 28-249 145Z"
+        />
         <g
           className="building-structure draw-phase"
           onMouseEnter={() => setDetail(t.structure)}
@@ -86,23 +107,46 @@ export function Blueprint({ compact = false }: { compact?: boolean }) {
           <path className="upper-plane" d="m140 163 208 120v89L140 252Z" />
           <path d="M140 163v200M348 283v200M561 160v200M140 252l208 120 213-123M140 342l208 120 213-123M348 394l213-123" />
         </g>
+        <g className="material-details finished-detail">
+          <path d="m153 171 0 88m17-78v88m17-78v88m17-78v88m17-78v88m17-78v88m17-78v88m17-78v88m17-78v88m17-78v88m17-78v88m17-78v88" />
+          <path d="m140 274 208 120m-208-98 208 120m-208-98 208 120m-208-98 208 120" />
+        </g>
         <g
           className="roof-plane draw-phase"
           onMouseEnter={() => setDetail(t.roof)}
           onMouseLeave={() => setDetail("")}
         >
           <path d="m123 153 228-132 229 132-228 132Z" />
-          <path d="m123 153 229 132v15L123 168Zm229 132 228-132v15L352 300" />
-          <path className="roof-inset" d="m171 153 180-104 180 104-180 104Z" />
+          <path
+            className="roof-edge"
+            d="m123 153 229 132v15L123 168Zm229 132 228-132v15L352 300"
+          />
+          <path
+            className="roof-inset"
+            d="m171 153 180-104 180 104-180 104Z"
+            style={{ fill: finished ? `url(#${materialId}-roof)` : undefined }}
+          />
+          <g className="roof-planting finished-detail">
+            <path d="m201 153 150-87 150 87-150 87Zm30 0 120-70 120 70-120 70Zm30 0 90-52 90 52-90 52Z" />
+          </g>
         </g>
         <g
           className="windows draw-phase"
           onMouseEnter={() => setDetail(t.facade)}
           onMouseLeave={() => setDetail("")}
         >
-          <path d="m164 197 159 92v61l-159-92ZM184 209v60M211 224v60M239 240v60M267 256v60M295 273v60" />
-          <path d="m374 304 159-92v119l-159 92ZM400 289v119M427 273v120M454 258v119M481 243v119M508 228v120M374 365l159-92" />
-          <path d="m164 285 53 31v61l-53-31ZM244 332l79 46v61l-79-46ZM270 347v61M297 363v61" />
+          <g
+            className="window-glazing"
+            style={{ fill: finished ? `url(#${materialId}-glass)` : undefined }}
+          >
+            <path d="m164 197 159 92v61l-159-92Z" />
+            <path d="m374 304 159-92v119l-159 92Z" />
+            <path d="m164 285 53 31v61l-53-31ZM244 332l79 46v61l-79-46Z" />
+          </g>
+          <path
+            className="window-frames"
+            d="M184 209v60M211 224v60M239 240v60M267 256v60M295 273v60M400 289v119M427 273v120M454 258v119M481 243v119M508 228v120M374 365l159-92M270 347v61M297 363v61"
+          />
         </g>
         <g className="architectural-details draw-phase">
           <path d="m132 365 216 125 223-129M126 373l222 128 229-132M119 381l229 132 236-136M348 501v12M348 490v11" />

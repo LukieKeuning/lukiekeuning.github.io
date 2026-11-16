@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+  <rect width="1000" height="700" fill="#e9e4d9"/>
+  <circle cx="775" cy="175" r="95" fill="#d9b36d" opacity=".5"/>
+  <path d="M0 550 550 315 1000 490V700H0Z" fill="#d2cebd"/>
+  <path d="m170 370 330-155 325 145-330 160Z" fill="#f8f4ea" stroke="#485b54" stroke-width="3"/>
+  <path d="m170 370 325 150v155L170 520Z" fill="#c1a27e" stroke="#485b54" stroke-width="3"/>
+  <path d="m495 520 330-160v155L495 675Z" fill="#f2eee4" stroke="#485b54" stroke-width="3"/>
+  <path d="m350 366 145-68 149 66-147 70Z" fill="#6c826b" stroke="#485b54" stroke-width="3"/>
+  <path d="m350 366 147 68v64L350 430Zm147 68 147-70v64l-147 70Z" fill="#acc1b3" stroke="#485b54" stroke-width="3"/>
+  <g stroke="#685d4c" stroke-width="7"><path d="M200 398v125m26-113v125m26-113v125m26-113v125m26-113v125m26-113v125"/></g>
+  <g fill="#8baba5" stroke="#485b54" stroke-width="3"><path d="m545 519 90-43v106l-90 44Zm120-58 109-52v106l-109 53Z"/></g>
+  <path d="M80 610h270M80 600v20m270-20v20" fill="none" stroke="#485b54"/>
+  <text x="60" y="75" fill="#485b54" font-family="monospace" font-size="16" letter-spacing="3">01 / COURTYARD HOUSE</text>
+  <text x="60" y="104" fill="#485b54" font-family="monospace" font-size="12" letter-spacing="2">CONCEPT / FICTIONAL SAMPLE</text>
+</svg>

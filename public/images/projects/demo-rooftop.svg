@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+  <rect width="1000" height="700" fill="#e6e2db"/>
+  <circle cx="225" cy="210" r="90" fill="#d5a76a" opacity=".5"/>
+  <path d="M0 590 630 360l370 170v170H0Z" fill="#cecebe"/>
+  <path d="m250 390 310-140 250 115-312 145Z" fill="#718469" stroke="#4f5850" stroke-width="3"/>
+  <path d="m250 390 248 120v165L250 550Z" fill="#ba8f77" stroke="#4f5850" stroke-width="3"/>
+  <path d="m498 510 312-145v172L498 675Z" fill="#99755f" stroke="#4f5850" stroke-width="3"/>
+  <path d="m345 300 220-100 190 85-223 105Z" fill="#f4eddf" stroke="#4f5850" stroke-width="3"/>
+  <path d="m345 300 187 90v100l-187-90Z" fill="#c8b18a" stroke="#4f5850" stroke-width="3"/>
+  <path d="m532 390 223-105v100L532 490Z" fill="#ad9974" stroke="#4f5850" stroke-width="3"/>
+  <g fill="#a0bab3" stroke="#4f5850" stroke-width="3"><path d="m375 332 57 28v65l-57-28Zm81 39 53 26v65l-53-26Zm102 24 72-34v66l-72 34Zm96-45 72-34v66l-72 34Z"/></g>
+  <g fill="#d8d7c7" stroke="#4f5850" stroke-width="3"><path d="m281 442 58 29v68l-58-29Zm88 44 58 29v68l-58-29Zm169 37 65-31v70l-65 31Zm98-46 65-31v70l-65 31Zm98-46 48-23v70l-48 23Z"/></g>
+  <path d="m275 386 221 107 289-132" fill="none" stroke="#4f5850" stroke-width="3"/>
+  <g fill="#718469"><circle cx="301" cy="374" r="20"/><circle cx="776" cy="348" r="22"/></g>
+  <text x="60" y="75" fill="#4f5850" font-family="monospace" font-size="16" letter-spacing="3">03 / TIMBER ROOFTOP</text>
+  <text x="60" y="104" fill="#4f5850" font-family="monospace" font-size="12" letter-spacing="2">CONCEPT / FICTIONAL SAMPLE</text>
+</svg>

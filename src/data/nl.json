@@ -6,11 +6,11 @@
       "title": "Student Bouwkunde",
       "location": "Den Haag, Zuid-Holland, Nederland",
       "introduction": "Student Bouwkunde aan De Haagse Hogeschool, gevestigd in Den Haag.",
-      "availability": ""
+      "availability": "Voorbeeldversie · aangevuld met fictieve teksten en projecten"
     },
     "about": {
-      "biography": "Ik omschrijf mezelf als creatief, communicatief en een teamspeler.",
-      "motivation": "Mijn belangstelling gaat uit naar renovatie- en transformatieprojecten, uitbouwen en optoppingen."
+      "biography": "Ik omschrijf mezelf als creatief, communicatief en een teamspeler. Van een eerste schets tot een uitgewerkt bouwdetail: ik vind het interessant om te ontdekken hoe een idee een plek wordt waar mensen graag wonen en werken. Ik kijk daarbij naar licht, materiaal en de manier waarop een gebouw aansluit op zijn omgeving. Deze aanvullende profieltekst is een fictief voorbeeld.",
+      "motivation": "Mijn belangstelling gaat uit naar renovatie- en transformatieprojecten, uitbouwen en optoppingen. Bestaande gebouwen een tweede leven geven lijkt me een mooie ontwerpopgave: behouden wat karakter heeft en verbeteren waar nieuwe mogelijkheden liggen. Voorbeeldtekst: in mijn ontwerpen onderzoek ik graag hoe hout, daglicht en een slimme indeling samen een prettige leefomgeving kunnen maken."
     },
     "education": [
       {
@@ -20,8 +20,12 @@
         "start": "2024-09",
         "expectedEnd": "2028-07",
         "ongoing": true,
-        "description": "",
-        "specializations": [],
+        "description": "Voorbeeldtekst: tijdens mijn studie verbind ik ruimtelijk ontwerpen met bouwtechniek. Ik werk ideeën uit in schetsen, digitale modellen en technische tekeningen en onderzoek hoe materiaalkeuzes bijdragen aan een duurzaam gebouw.",
+        "specializations": [
+          "Voorbeeld: duurzaam bouwen",
+          "Voorbeeld: bouwtechnisch ontwerpen",
+          "Voorbeeld: hergebruik en transformatie"
+        ],
         "end": ""
       },
       {
@@ -32,8 +36,8 @@
         "end": "2024",
         "expectedEnd": "",
         "ongoing": false,
-        "description": "",
-        "specializations": []
+        "description": "Voorbeeldtekst: het profiel Natuur & Techniek vormde de basis voor mijn belangstelling voor constructies, ruimtelijk inzicht en het oplossen van technische vraagstukken.",
+        "specializations": ["Voorbeeld: wiskunde", "Voorbeeld: natuurkunde"]
       }
     ],
     "experience": [
@@ -46,8 +50,12 @@
         "end": null,
         "location": "Huizen, Noord-Holland",
         "workMode": "",
-        "description": "",
-        "skills": [],
+        "description": "Voorbeeldtekst, nog te vervangen door echte werkzaamheden: meekijken bij de ontwikkeling van bestaand vastgoed, tekeningen vergelijken en ideeën voor een nieuwe indeling verkennen. De wisselwerking tussen een gebouw, de gebruikers en de haalbaarheid staat centraal.",
+        "skills": [
+          "Voorbeeld: tekeningen lezen",
+          "Voorbeeld: ruimtelijke analyse",
+          "Voorbeeld: samenwerken"
+        ],
         "propertyRelated": true
       },
       {
@@ -59,7 +67,7 @@
         "end": "2026-08",
         "location": "Den Haag",
         "workMode": "Op locatie",
-        "description": "Werkzaam geweest bij De Kitchen.",
+        "description": "Werkzaam geweest bij De Kitchen. Voorbeeldtekst: op drukke dagen overzicht houden, gasten gastvrij ontvangen en samen met collega's zorgen dat de bediening soepel verloopt. Een omgeving waarin duidelijk communiceren en snel schakelen belangrijk zijn.",
         "skills": ["Sociaal", "Serveren"],
         "propertyRelated": false
       },
@@ -72,7 +80,7 @@
         "end": "2024-08",
         "location": "Den Haag",
         "workMode": "Op locatie",
-        "description": "Catering bij Tabitha van Cardia.",
+        "description": "Catering bij Tabitha van Cardia. Voorbeeldtekst: aandacht voor de bewoners combineren met praktische ondersteuning rond de maaltijden. Kleine dingen, zoals rustig luisteren en persoonlijke aandacht geven, maken de dagelijkse ervaring prettiger.",
         "skills": ["Werken met ouderen"],
         "propertyRelated": false
       },
@@ -85,7 +93,7 @@
         "end": "2024-06",
         "location": "Den Haag",
         "workMode": "Op locatie",
-        "description": "Werkzaam bij Oehoe/Kitchen.",
+        "description": "Werkzaam bij Oehoe/Kitchen. Voorbeeldtekst: mijn eerste ervaring met werken in een hecht team, verantwoordelijkheid nemen en contact met uiteenlopende gasten. Hier leerde ik hoe belangrijk een goede voorbereiding en een behulpzame houding zijn.",
         "skills": ["Sociaal", "Serveren"],
         "propertyRelated": false
       }
@@ -94,12 +102,22 @@
       {
         "id": "architecture",
         "name": "Bouwkundige vaardigheden",
-        "items": []
+        "items": [
+          "Voorbeeld: bouwkundig tekenen",
+          "Voorbeeld: ruimtelijk ontwerpen",
+          "Voorbeeld: materialisatie",
+          "Voorbeeld: duurzaam detailleren"
+        ]
       },
       {
         "id": "software",
         "name": "Software",
-        "items": []
+        "items": [
+          "Voorbeeld: Revit",
+          "Voorbeeld: AutoCAD",
+          "Voorbeeld: SketchUp",
+          "Voorbeeld: Adobe InDesign"
+        ]
       },
       {
         "id": "professional",
@@ -109,11 +127,89 @@
       {
         "id": "other",
         "name": "Overige vaardigheden",
-        "items": []
+        "items": [
+          "Voorbeeld: maquettes maken",
+          "Voorbeeld: schetsen met de hand",
+          "Voorbeeld: presentaties vormgeven"
+        ]
       }
     ],
-    "projects": [],
-    "interests": [],
+    "projects": [
+      {
+        "id": "demo-courtyard-house",
+        "title": "Wonen rond een binnentuin",
+        "description": "Fictief voorbeeldproject om de portfolio-opmaak te laten zien. Een compacte stadswoning rond een beschutte binnentuin. Grote openingen brengen daglicht diep in de woning, terwijl houten lamellen privacy bieden aan de straat. Het ontwerp verkent de balans tussen een open leefruimte en rustige plekken om je terug te trekken. De getoonde illustratie is een conceptschets, geen uitgevoerd ontwerp.",
+        "year": "2026",
+        "category": "Fictief voorbeeld · woningontwerp",
+        "cover": "images/projects/demo-courtyard.svg",
+        "images": [
+          {
+            "src": "images/projects/demo-courtyard.svg",
+            "alt": "Conceptillustratie van een fictieve woning met binnentuin"
+          }
+        ],
+        "tools": ["Schetsontwerp", "Ruimtelijke studie", "Materiaalonderzoek"],
+        "url": ""
+      },
+      {
+        "id": "demo-warehouse",
+        "title": "Van werkplaats naar ontmoetingsplek",
+        "description": "Fictief voorbeeldproject. Een oude werkplaats krijgt in deze ontwerpstudie een nieuwe functie als buurtatelier met werkplekken en een gezamenlijke ontmoetingsruimte. De bestaande draagconstructie blijft zichtbaar. Een lichte houten inbouw en nieuwe daklichten voegen warmte en daglicht toe. De studie onderzoekt hoe een gebouw kan veranderen zonder zijn oorspronkelijke karakter te verliezen.",
+        "year": "2025",
+        "category": "Fictief voorbeeld · transformatie",
+        "cover": "images/projects/demo-warehouse.svg",
+        "images": [
+          {
+            "src": "images/projects/demo-warehouse.svg",
+            "alt": "Conceptillustratie van een fictieve werkplaats met zaagtanddak"
+          }
+        ],
+        "tools": ["Herbestemming", "Gevelstudie", "Daglichtonderzoek"],
+        "url": ""
+      },
+      {
+        "id": "demo-rooftop",
+        "title": "Een nieuwe laag boven de stad",
+        "description": "Fictief voorbeeldproject. Een lichte houten optopping voegt woonruimte toe aan een bestaand stedelijk bouwblok. De nieuwe verdieping ligt terug ten opzichte van de gevel, waardoor ruimte ontstaat voor een groen dakterras. In deze conceptstudie staan een laag constructiegewicht, herhaalbare bouwelementen en de aansluiting op het bestaande gebouw centraal.",
+        "year": "2025",
+        "category": "Fictief voorbeeld · optopping",
+        "cover": "images/projects/demo-rooftop.svg",
+        "images": [
+          {
+            "src": "images/projects/demo-rooftop.svg",
+            "alt": "Conceptillustratie van een fictieve houten optopping op een bakstenen gebouw"
+          }
+        ],
+        "tools": ["Houtbouw", "Constructieconcept", "Groene daken"],
+        "url": ""
+      }
+    ],
+    "interests": [
+      {
+        "id": "football",
+        "title": "Voetbal",
+        "period": "Voetbal / van mijn 8e tot ongeveer mijn 17e",
+        "description": "Ongeveer negen jaar lang hoorde voetbal bij mijn week. Samen het veld op, alles geven voor het team en na afloop de wedstrijd nog eens uitgebreid bespreken. De voetbalschoenen staan inmiddels aan de zijlijn, maar dat teamgevoel neem ik mee."
+      },
+      {
+        "id": "fitness",
+        "title": "Fitness & sportschool",
+        "period": "Fitness / sinds ongeveer mei 2025",
+        "description": "In de sportschool werk ik aan een ander soort constructie: mezelf. Gewoon lekker trainen, mijn hoofd leegmaken en stap voor stap sterker worden. Geen bouwtekening nodig, wel een beetje doorzettingsvermogen."
+      },
+      {
+        "id": "friends",
+        "title": "Afspreken met vrienden",
+        "period": "Vrienden / tijd voor gezelligheid",
+        "description": "Afspreken met vrienden is voor mij de ideale afwisseling naast studie en sport. Samen op pad of gewoon ergens blijven hangen en veel lachen: met goed gezelschap hoeft er niet altijd een groot plan te zijn. Mijn beste vriend Matty Jutte is daar natuurlijk vaak bij."
+      },
+      {
+        "id": "gaming",
+        "title": "Gamen",
+        "period": "Gamen / ontspannen na een volle dag",
+        "description": "Soms verruil ik de echte wereld graag voor een digitale. Even gamen, ontspannen en de tijd vergeten. Ook hier is samenwerken leuk, al mag een beetje gezonde competitie natuurlijk niet ontbreken."
+      }
+    ],
     "contact": {
       "email": "lukiekeuning@gmail.com",
       "phone": "06-25403062",
@@ -125,6 +221,11 @@
       "cvFile": "cv/lukie-keuning.pdf"
     },
     "qualifications": [
+      {
+        "id": "havo",
+        "name": "HAVO-diploma",
+        "date": "2024"
+      },
       {
         "id": "propaedeutic",
         "name": "Propedeuse Bouwkunde",

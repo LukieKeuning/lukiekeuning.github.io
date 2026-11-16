@@ -49,7 +49,12 @@ export interface Profile {
   experience: Experience[];
   skills: { id: string; name: string; items: string[] }[];
   projects: Project[];
-  interests: string[];
+  interests: {
+    id: string;
+    title: string;
+    period: string;
+    description: string;
+  }[];
   contact: { email: string; phone: string; linkedin: string };
   assets: {
     profileImage: string;

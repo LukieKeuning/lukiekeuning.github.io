@@ -6,11 +6,11 @@
       "title": "Built Environment Student",
       "location": "The Hague, South Holland, Netherlands",
       "introduction": "Built Environment student at The Hague University of Applied Sciences, based in The Hague.",
-      "availability": ""
+      "availability": "Sample version · includes fictional text and projects"
     },
     "about": {
-      "biography": "I describe myself as creative, communicative and a team player.",
-      "motivation": "I am interested in renovation and conversion projects, extensions and adding storeys to existing buildings."
+      "biography": "I describe myself as creative, communicative and a team player. From an initial sketch to a construction detail, I enjoy exploring how an idea becomes a place where people like to live and work. Light, materials and a building's relationship with its surroundings are central to that exploration. This extended profile text is a fictional example.",
+      "motivation": "I am interested in renovation and conversion projects, extensions and adding storeys to existing buildings. Giving existing buildings a second life feels like an exciting design challenge: retaining their character while discovering new possibilities. Sample text: in my designs I enjoy exploring how timber, daylight and a thoughtful layout can create a pleasant living environment."
     },
     "education": [
       {
@@ -20,8 +20,12 @@
         "start": "2024-09",
         "expectedEnd": "2028-07",
         "ongoing": true,
-        "description": "",
-        "specializations": [],
+        "description": "Sample text: my studies connect spatial design with building technology. I develop ideas through sketches, digital models and technical drawings, exploring how material choices contribute to sustainable buildings.",
+        "specializations": [
+          "Sample: sustainable construction",
+          "Sample: technical design",
+          "Sample: reuse and conversion"
+        ],
         "end": ""
       },
       {
@@ -32,8 +36,8 @@
         "end": "2024",
         "expectedEnd": "",
         "ongoing": false,
-        "description": "",
-        "specializations": []
+        "description": "Sample text: the Science & Technology pathway laid the foundations for my interest in structures, spatial thinking and solving technical problems.",
+        "specializations": ["Sample: mathematics", "Sample: physics"]
       }
     ],
     "experience": [
@@ -46,8 +50,12 @@
         "end": null,
         "location": "Huizen, North Holland",
         "workMode": "",
-        "description": "",
-        "skills": [],
+        "description": "Sample text, to be replaced with actual responsibilities: observing the development of existing properties, comparing drawings and exploring ideas for new layouts. The relationship between a building, its users and project feasibility takes centre stage.",
+        "skills": [
+          "Sample: reading drawings",
+          "Sample: spatial analysis",
+          "Sample: teamwork"
+        ],
         "propertyRelated": true
       },
       {
@@ -59,7 +67,7 @@
         "end": "2026-08",
         "location": "The Hague",
         "workMode": "On-site",
-        "description": "Worked at De Kitchen.",
+        "description": "Worked at De Kitchen. Sample text: keeping an overview on busy days, welcoming guests and working with colleagues to provide smooth service. An environment where clear communication and adaptability matter.",
         "skills": ["Social skills", "Table service"],
         "propertyRelated": false
       },
@@ -72,7 +80,7 @@
         "end": "2024-08",
         "location": "The Hague",
         "workMode": "On-site",
-        "description": "Catering at Cardia’s Tabitha location.",
+        "description": "Catering at Cardia’s Tabitha location. Sample text: combining personal attention for residents with practical support around meals. Small gestures, patient listening and a friendly conversation make the daily experience more pleasant.",
         "skills": ["Working with older adults"],
         "propertyRelated": false
       },
@@ -85,7 +93,7 @@
         "end": "2024-06",
         "location": "The Hague",
         "workMode": "On-site",
-        "description": "Worked at Oehoe/Kitchen.",
+        "description": "Worked at Oehoe/Kitchen. Sample text: my first experience of working in a close team, taking responsibility and meeting a wide range of guests. This taught me the value of good preparation and a helpful attitude.",
         "skills": ["Social skills", "Table service"],
         "propertyRelated": false
       }
@@ -94,12 +102,22 @@
       {
         "id": "architecture",
         "name": "Architectural skills",
-        "items": []
+        "items": [
+          "Sample: architectural drawing",
+          "Sample: spatial design",
+          "Sample: material selection",
+          "Sample: sustainable detailing"
+        ]
       },
       {
         "id": "software",
         "name": "Software",
-        "items": []
+        "items": [
+          "Sample: Revit",
+          "Sample: AutoCAD",
+          "Sample: SketchUp",
+          "Sample: Adobe InDesign"
+        ]
       },
       {
         "id": "professional",
@@ -109,11 +127,89 @@
       {
         "id": "other",
         "name": "Other skills",
-        "items": []
+        "items": [
+          "Sample: model making",
+          "Sample: freehand sketching",
+          "Sample: presentation design"
+        ]
       }
     ],
-    "projects": [],
-    "interests": [],
+    "projects": [
+      {
+        "id": "demo-courtyard-house",
+        "title": "Living around a courtyard",
+        "description": "Fictional sample project to demonstrate the portfolio layout. A compact urban home arranged around a sheltered courtyard. Large openings bring daylight deep into the house, while timber screens provide privacy from the street. The design explores the balance between open living spaces and quiet places to retreat. The illustration is a concept sketch, not a completed design.",
+        "year": "2026",
+        "category": "Fictional sample · residential design",
+        "cover": "images/projects/demo-courtyard.svg",
+        "images": [
+          {
+            "src": "images/projects/demo-courtyard.svg",
+            "alt": "Concept illustration of a fictional courtyard house"
+          }
+        ],
+        "tools": ["Concept design", "Spatial study", "Material research"],
+        "url": ""
+      },
+      {
+        "id": "demo-warehouse",
+        "title": "From workshop to meeting place",
+        "description": "Fictional sample project. In this design study, an old workshop becomes a neighbourhood studio with workspaces and a shared meeting area. The existing structure remains exposed. A light timber insertion and new rooflights add warmth and daylight. The study explores how a building can change while retaining its original character.",
+        "year": "2025",
+        "category": "Fictional sample · adaptive reuse",
+        "cover": "images/projects/demo-warehouse.svg",
+        "images": [
+          {
+            "src": "images/projects/demo-warehouse.svg",
+            "alt": "Concept illustration of a fictional workshop with a sawtooth roof"
+          }
+        ],
+        "tools": ["Adaptive reuse", "Facade study", "Daylight research"],
+        "url": ""
+      },
+      {
+        "id": "demo-rooftop",
+        "title": "A new layer above the city",
+        "description": "Fictional sample project. A lightweight timber rooftop extension adds living space to an existing urban block. The new storey is set back from the facade to create a planted roof terrace. This concept study focuses on low structural weight, repeatable building elements and the connection to the existing building.",
+        "year": "2025",
+        "category": "Fictional sample · rooftop extension",
+        "cover": "images/projects/demo-rooftop.svg",
+        "images": [
+          {
+            "src": "images/projects/demo-rooftop.svg",
+            "alt": "Concept illustration of a fictional timber extension above a brick building"
+          }
+        ],
+        "tools": ["Timber construction", "Structural concept", "Green roofs"],
+        "url": ""
+      }
+    ],
+    "interests": [
+      {
+        "id": "football",
+        "title": "Football",
+        "period": "Football / from age 8 to around 17",
+        "description": "For roughly nine years, football was part of my weekly routine. Getting out on the pitch, giving everything for the team and discussing the match afterwards. My football boots are on the sidelines now, but that team spirit stays with me."
+      },
+      {
+        "id": "fitness",
+        "title": "Fitness & the gym",
+        "period": "Fitness / since around May 2025",
+        "description": "At the gym I work on a different kind of structure: myself. Training, clearing my head and getting stronger one step at a time. No construction drawings required, just a little determination."
+      },
+      {
+        "id": "friends",
+        "title": "Spending time with friends",
+        "period": "Friends / making time for good company",
+        "description": "Meeting up with friends is the perfect change of pace alongside studying and training. Heading out or simply hanging around and sharing a laugh: with good company, you do not always need a grand plan. My best friend Matty Jutte is naturally often part of that."
+      },
+      {
+        "id": "gaming",
+        "title": "Gaming",
+        "period": "Gaming / unwinding after a busy day",
+        "description": "Sometimes I like swapping the real world for a digital one. Playing games, relaxing and losing track of time. Teamwork is fun here too, although a little friendly competition is always welcome."
+      }
+    ],
     "contact": {
       "email": "lukiekeuning@gmail.com",
       "phone": "06-25403062",
@@ -125,6 +221,11 @@
       "cvFile": "cv/lukie-keuning.pdf"
     },
     "qualifications": [
+      {
+        "id": "havo",
+        "name": "Dutch HAVO diploma",
+        "date": "2024"
+      },
       {
         "id": "propaedeutic",
         "name": "Built Environment propaedeutic diploma",

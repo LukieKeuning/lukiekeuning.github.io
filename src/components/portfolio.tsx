@@ -3,7 +3,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useRef, useState } from "react";
 import {
-  ArrowDown,
   ArrowUp,
   ArrowUpRight,
   Download,
@@ -16,6 +15,10 @@ import {
   Mail,
   Phone,
   Linkedin,
+  CircleDot,
+  Dumbbell,
+  Users,
+  Gamepad2,
 } from "lucide-react";
 import { usePreferences } from "@/context/preferences";
 import { assetPath, safeExternalUrl } from "@/lib/paths";
@@ -96,11 +99,13 @@ export function Portfolio() {
   }, [language]);
   useEffect(() => {
     if (!selectedProject) return;
+    const opener = document.activeElement;
     dialog.current?.showModal();
     const original = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = original;
+      if (opener instanceof HTMLElement) opener.focus({ preventScroll: true });
     };
   }, [selectedProject]);
 
@@ -211,16 +216,6 @@ export function Portfolio() {
           <div className="hero-visual">
             <Blueprint />
             <p className="concept-caption">{t.concept}</p>
-          </div>
-          <div className="hero-bottom">
-            <span>01 — {t.portfolio}</span>
-            <a href="#about" aria-label={t.next}>
-              <ArrowDown size={17} />
-            </a>
-            <span>
-              {profile.education[0]?.start.slice(0, 4)} —{" "}
-              {profile.education[0]?.expectedEnd.slice(0, 4)}
-            </span>
           </div>
         </section>
         <section id="about" className="section shell">
@@ -505,13 +500,34 @@ export function Portfolio() {
               label={t.interests}
               title={t.interestsHeading}
             />
-            <ul className="skill-tags">
+            <div className="interests-grid">
               {profile.interests
-                .filter((interest) => interest)
-                .map((interest, index) => (
-                  <li key={index}>{interest}</li>
-                ))}
-            </ul>
+                .filter((interest) => interest.title)
+                .map((interest, index) => {
+                  const Icon =
+                    {
+                      football: CircleDot,
+                      fitness: Dumbbell,
+                      friends: Users,
+                      gaming: Gamepad2,
+                    }[interest.id] ?? Building2;
+                  return (
+                    <article key={interest.id} className="interest-card">
+                      <div className="interest-card-top">
+                        <span className="interest-number">
+                          {String(index + 1).padStart(2, "0")} /
+                        </span>
+                        <p className="eyebrow">{interest.period}</p>
+                        <Icon size={26} strokeWidth={1.4} aria-hidden="true" />
+                      </div>
+                      <div className="interest-card-copy">
+                        <h3>{interest.title}</h3>
+                        <p>{interest.description}</p>
+                      </div>
+                    </article>
+                  );
+                })}
+            </div>
           </section>
         )}
         {visible.contact && (
@@ -578,51 +594,81 @@ export function Portfolio() {
             if (event.target === event.currentTarget) dialog.current?.close();
           }}
         >
-          <button
-            autoFocus
-            className="dialog-close icon-button"
-            aria-label={t.close}
-            onClick={() => dialog.current?.close()}
-          >
-            <X />
-          </button>
-          <p className="eyebrow">
-            {selectedProject.year} / {selectedProject.category}
-          </p>
-          <h2 id="project-title">{selectedProject.title}</h2>
-          <p className="project-description">{selectedProject.description}</p>
-          {selectedProject.tools.length > 0 && (
-            <p>
-              {t.tools}: {selectedProject.tools.join(" · ")}
-            </p>
-          )}
-          {selectedProject.cover && (
-            <img
-              src={assetPath(selectedProject.cover)}
-              alt={selectedProject.title}
-              width={1000}
-              height={700}
-            />
-          )}
-          {selectedProject.images.map((image, index) => (
-            <img
-              key={index}
-              src={assetPath(image.src)}
-              alt={image.alt}
-              width={1000}
-              height={700}
-            />
-          ))}
-          {safeExternalUrl(selectedProject.url) && (
-            <a
-              className="primary-button"
-              href={safeExternalUrl(selectedProject.url)}
-              target="_blank"
-              rel="noopener noreferrer"
+          <div className="project-dialog-bar">
+            <span className="eyebrow">
+              {t.projects} / {selectedProject.year}
+            </span>
+            <button
+              autoFocus
+              className="dialog-close"
+              aria-label={t.close}
+              onClick={() => dialog.current?.close()}
             >
-              {t.external}
-              <ArrowUpRight size={18} />
-            </a>
+              <span>{t.close}</span>
+              <X size={19} />
+            </button>
+          </div>
+          <div className="project-dialog-layout">
+            <div className="project-dialog-art">
+              {selectedProject.cover ? (
+                <img
+                  src={assetPath(selectedProject.cover)}
+                  alt={selectedProject.title}
+                  width={1000}
+                  height={700}
+                />
+              ) : (
+                <div className="project-fallback">
+                  <Building2 size={64} />
+                </div>
+              )}
+            </div>
+            <div className="project-dialog-copy">
+              <p className="eyebrow">{selectedProject.category}</p>
+              <h2 id="project-title">{selectedProject.title}</h2>
+              <p className="project-description">
+                {selectedProject.description}
+              </p>
+              {selectedProject.tools.length > 0 && (
+                <div className="project-dialog-tools">
+                  <h3>{t.tools}</h3>
+                  <ul className="skill-tags">
+                    {selectedProject.tools.map((tool) => (
+                      <li key={tool}>{tool}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {safeExternalUrl(selectedProject.url) && (
+                <a
+                  className="primary-button"
+                  href={safeExternalUrl(selectedProject.url)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t.external}
+                  <ArrowUpRight size={18} />
+                </a>
+              )}
+            </div>
+          </div>
+          {selectedProject.images.some(
+            (image) => image.src !== selectedProject.cover,
+          ) && (
+            <div className="project-dialog-gallery">
+              {selectedProject.images
+                .filter((image) => image.src !== selectedProject.cover)
+                .map((image, index) => (
+                  <img
+                    key={index}
+                    src={assetPath(image.src)}
+                    alt={image.alt}
+                    width={1000}
+                    height={700}
+                    loading="lazy"
+                  />
+                ))}
+            </div>
           )}
         </dialog>
       )}

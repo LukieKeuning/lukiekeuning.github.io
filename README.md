@@ -104,7 +104,9 @@ Voeg aan `profile.education` een object toe met `id`, `institution`, `degree`, `
 
 ### Vaardigheden en interesses
 
-Voeg strings toe aan `profile.skills` onder de juiste categorie, bijvoorbeeld `"items": ["Bevestigde vaardigheid"]`. Vertaal de items en categorienaam in het Engelse bestand. Lege categorieën blijven verborgen. Er worden geen percentages of niveaus afgeleid. `profile.interests` is eveneens een lijst strings.
+Voeg strings toe aan `profile.skills` onder de juiste categorie, bijvoorbeeld `"items": ["Bevestigde vaardigheid"]`. Vertaal de items en categorienaam in het Engelse bestand. Lege categorieën blijven verborgen. Er worden geen percentages of niveaus afgeleid.
+
+`profile.interests` bevat hobbykaarten met `id`, `title`, `period` en `description`. De ids `football`, `fitness`, `friends` en `gaming` hebben een eigen icoon. Andere ids krijgen een gebouwicoon. De periode verschijnt tussen het nummer en het icoon. Laat de titel leeg om een kaart te verbergen. Pas periodes en teksten in beide talen aan in de JSON-bestanden; er worden geen leeftijden of looptijden automatisch berekend.
 
 ### Projecten en foto's
 

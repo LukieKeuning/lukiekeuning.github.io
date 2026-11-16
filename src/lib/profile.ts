@@ -10,7 +10,7 @@ export function visibleSections(profile: Profile) {
     experience: profile.experience.length > 0,
     skills: profile.skills.some((group) => group.items.some((item) => item)),
     projects: profile.projects.some((project) => project.title),
-    interests: profile.interests.some((item) => item),
+    interests: profile.interests.some((item) => item.title),
     contact: Boolean(
       profile.contact.email ||
       profile.contact.phone ||

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+  <rect width="1000" height="700" fill="#dce4e1"/>
+  <path d="M0 530 550 340l450 150v210H0Z" fill="#c3d0c7"/>
+  <path d="M145 330v240l565 65V367L540 235v112L360 215v111L180 195Z" fill="#c49b80" stroke="#495951" stroke-width="3"/>
+  <path d="m710 367 150-80v265l-150 83Z" fill="#9c7d68" stroke="#495951" stroke-width="3"/>
+  <g fill="#f3eee3" stroke="#495951" stroke-width="3"><path d="m180 195 150-80 180 131-150 80Zm180 20 150-80 180 132-150 80Zm180 20 150-80 170 132-150 80Z"/></g>
+  <g fill="#8faaa8" stroke="#495951" stroke-width="3"><path d="m180 195 180 131-180-21Zm180 20 180 132-180-21Zm180 20 170 132-170-20Z"/></g>
+  <g fill="#d8e1d7" stroke="#495951" stroke-width="4"><path d="m185 395 120 14v151l-120-14Zm165 19 120 14v151l-120-14Zm165 19 145 17v151l-145-17Z"/></g>
+  <g stroke="#495951" stroke-width="3"><path d="m245 402 0 151m165-132v151m177-131v151M185 466l120 14m45 5 120 14m45 5 145 17"/></g>
+  <circle cx="810" cy="548" r="47" fill="#718b6b"/><path d="M810 548v83" stroke="#495951" stroke-width="7"/>
+  <text x="60" y="75" fill="#495951" font-family="monospace" font-size="16" letter-spacing="3">02 / NEIGHBOURHOOD STUDIO</text>
+  <text x="60" y="104" fill="#495951" font-family="monospace" font-size="12" letter-spacing="2">CONCEPT / FICTIONAL SAMPLE</text>
+</svg>
