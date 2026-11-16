@@ -113,12 +113,7 @@
       {
         "id": "software",
         "name": "Software",
-        "items": [
-          "Revit",
-          "AutoCAD",
-          "SketchUp",
-          "Adobe InDesign"
-        ]
+        "items": ["Revit", "AutoCAD", "SketchUp", "Adobe InDesign"]
       },
       {
         "id": "professional",
