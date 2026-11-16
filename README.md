@@ -106,6 +106,8 @@ Voeg aan `profile.education` een object toe met `id`, `institution`, `degree`, `
 
 Voeg strings toe aan `profile.skills` onder de juiste categorie, bijvoorbeeld `"items": ["Bevestigde vaardigheid"]`. Vertaal de items en categorienaam in het Engelse bestand. Lege categorieën blijven verborgen. Er worden geen percentages of niveaus afgeleid.
 
+De vaardigheidsgroepen worden als onderdelen van een opengewerkt gebouw getoond: `professional` als fundering, `architecture` als draagconstructie, `software` als werkplaats en `other` als afwerking. Aanwijzen, focussen of selecteren van een categorie accentueert het bijbehorende onderdeel. Alle vaardigheden blijven leesbaar, ook zonder JavaScript. De illustratie is een metafoor voor de categorieën en geeft geen vaardigheidsniveaus aan. De labels en toelichting staan onder `ui.skillFoundation`, `skillStructure`, `skillWorkshop`, `skillFinish` en `skillDrawing*`.
+
 `profile.interests` bevat hobbykaarten met `id`, `title`, `period` en `description`. De ids `football`, `fitness`, `friends` en `gaming` hebben een eigen icoon. Andere ids krijgen een gebouwicoon. De periode verschijnt tussen het nummer en het icoon. Laat de titel leeg om een kaart te verbergen. Pas periodes en teksten in beide talen aan in de JSON-bestanden; er worden geen leeftijden of looptijden automatisch berekend.
 
 ### Projecten en foto's

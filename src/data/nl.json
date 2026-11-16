@@ -103,20 +103,21 @@
         "id": "architecture",
         "name": "Bouwkundige vaardigheden",
         "items": [
-          "Voorbeeld: bouwkundig tekenen",
-          "Voorbeeld: ruimtelijk ontwerpen",
-          "Voorbeeld: materialisatie",
-          "Voorbeeld: duurzaam detailleren"
+          "Bouwkundig tekenen",
+          "Daglicht berekeningen",
+          "Materialisatie",
+          "Duurzaamheid berekeningen",
+          "Constructieberekeningen"
         ]
       },
       {
         "id": "software",
         "name": "Software",
         "items": [
-          "Voorbeeld: Revit",
-          "Voorbeeld: AutoCAD",
-          "Voorbeeld: SketchUp",
-          "Voorbeeld: Adobe InDesign"
+          "Revit",
+          "AutoCAD",
+          "SketchUp",
+          "Adobe InDesign"
         ]
       },
       {
@@ -128,9 +129,10 @@
         "id": "other",
         "name": "Overige vaardigheden",
         "items": [
-          "Voorbeeld: maquettes maken",
-          "Voorbeeld: schetsen met de hand",
-          "Voorbeeld: presentaties vormgeven"
+          "Maquettes maken",
+          "Schetsen met de hand",
+          "Presentaties vormgeven",
+          "Documentatie en rapportage"
         ]
       }
     ],
@@ -277,6 +279,13 @@
     "educationHeading": "De basis voor later.",
     "experienceHeading": "Ervaring in de praktijk.",
     "skillsHeading": "Wat ik meebreng.",
+    "skillFoundation": "Fundering",
+    "skillStructure": "Draagconstructie",
+    "skillWorkshop": "Werkplaats",
+    "skillFinish": "Afwerking",
+    "skillDrawingLabel": "FIG. 02 / OPGEBOUWD UIT VAARDIGHEDEN",
+    "skillDrawingIntro": "Van een sterke basis tot het laatste detail. Ontdek de onderdelen door een categorie aan te wijzen of te selecteren.",
+    "skillDrawingAlt": "Opengewerkt gebouw met vier lagen: fundering voor professionele vaardigheden, draagconstructie voor bouwkundige vaardigheden, werkplaats voor software en afwerking voor overige vaardigheden.",
     "projectsHeading": "Werk in beeld.",
     "contactHeading": "Neem contact op.",
     "interestsHeading": "Buiten de studie.",

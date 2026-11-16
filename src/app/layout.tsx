@@ -4,6 +4,7 @@ import { PreferencesProvider } from "@/context/preferences";
 import { profile } from "@/data/profile";
 import { assetPath } from "@/lib/paths";
 import "./globals.css";
+import "@/components/skills-building.css";
 
 const geist = localFont({
   src: "../../public/fonts/geist-latin.woff2",

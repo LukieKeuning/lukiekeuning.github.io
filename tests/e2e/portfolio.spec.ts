@@ -200,6 +200,48 @@ test("responsive navigation and no horizontal overflow", async ({
   }
 });
 
+test("skills building selects layers without hiding skills", async ({
+  page,
+}, testInfo) => {
+  await page.goto("./");
+  const skills = page.locator("#skills");
+  await expect(skills.locator(".skills-building-card")).toHaveCount(4);
+  await expect(skills.locator(".skills-building-card li")).toHaveCount(14);
+  for (const [index, layer] of [
+    "foundation",
+    "structure",
+    "workshop",
+    "finish",
+  ].entries()) {
+    const button = skills.locator(".skills-building-card button").nth(index);
+    await button.click();
+    await expect(button).toHaveAttribute("aria-pressed", "true");
+    await expect(skills.locator(`.skills-layer.${layer}`)).toHaveClass(
+      /is-active/,
+    );
+    await expect(skills.locator(".skills-building-card li")).toHaveCount(14);
+  }
+  const button = skills.locator(".skills-building-card button").first();
+  await button.focus();
+  await page.keyboard.press("Enter");
+  await expect(button).toHaveAttribute("aria-pressed", "true");
+  await skills.locator(".skills-building").screenshot({
+    path: path.join(".tools", `skills-${testInfo.project.name}-light.png`),
+    style:
+      ".site-header,.skip-link { visibility: hidden; } .skills-building-figure { position: static; }",
+  });
+  await page.getByRole("button", { name: "Wissel kleurthema" }).click();
+  await page.getByRole("button", { name: "EN", exact: true }).click();
+  await expect(skills).toContainText("Foundation");
+  await expect(skills).toContainText("Workshop");
+  await skills.scrollIntoViewIfNeeded();
+  await skills.locator(".skills-building").screenshot({
+    path: path.join(".tools", `skills-${testInfo.project.name}-dark.png`),
+    style:
+      ".site-header,.skip-link { visibility: hidden; } .skills-building-figure { position: static; }",
+  });
+});
+
 test("static export contains facts and all referenced assets resolve", async ({
   request,
 }) => {

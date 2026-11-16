@@ -24,6 +24,7 @@ import { usePreferences } from "@/context/preferences";
 import { assetPath, safeExternalUrl } from "@/lib/paths";
 import { formatDate, visibleSections } from "@/lib/profile";
 import { Blueprint } from "./blueprint";
+import { SkillsBuilding } from "./skills-building";
 
 function CvLink() {
   const { t, profile } = usePreferences();
@@ -431,24 +432,7 @@ export function Portfolio() {
                 label={t.skills}
                 title={t.skillsHeading}
               />
-              {profile.skills
-                .filter((group) => group.items.some((item) => item))
-                .map((group) => (
-                  <div className="skill-group" key={group.id}>
-                    <h3>{group.name}</h3>
-                    <ul>
-                      {group.items
-                        .filter((item) => item)
-                        .map((item, index) => (
-                          <li key={index}>
-                            <span className="skill-index">0{index + 1}</span>
-                            {item}
-                            <ArrowUpRight size={20} aria-hidden="true" />
-                          </li>
-                        ))}
-                    </ul>
-                  </div>
-                ))}
+              <SkillsBuilding />
             </div>
           </section>
         )}
